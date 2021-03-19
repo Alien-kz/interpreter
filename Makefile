@@ -1,4 +1,4 @@
-all: bin/const.o bin/lexem.o bin/lexical.o bin/syntax.o bin/semantic.o bin/main 
+all: bin bin/const.o bin/lexem.o bin/lexical.o bin/syntax.o bin/semantic.o bin/main 
 
 bin:
 	mkdir bin
