@@ -24,8 +24,8 @@ bin/syntax.o: src/syntax.cpp
 bin/semantic.o: src/semantic.cpp
 	$(CXX) $? -o $@ $(FLAGS)
 
-bin/main: src/main.cpp
-	$(CXX) $? bin/const.o bin/lexem.o bin/lexical.o bin/syntax.o bin/semantic.o -o $@ -I./include -fsanitize=address,leak
+bin/main: src/main.cpp bin/const.o bin/lexem.o bin/lexical.o bin/syntax.o bin/semantic.o
+	$(CXX) $? -o $@ -I./include -fsanitize=address,leak
 
 clean:
 	$(DEL_FILE) bin/const.o bin/lexem.o bin/lexical.o bin/syntax.o bin/semantic.o bin/main
